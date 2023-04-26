@@ -1,0 +1,232 @@
+$main-color: #A95DDB;
+$black: #333;
+$bg-color-1: #F6F6F6;
+
+@mixin title{
+	font-size: 32px;
+    font-weight: 800;
+    color: #000;
+    margin: 0px;
+}
+
+@mixin center{
+	text-align: center;
+}
+
+
+@mixin block{
+	padding: 50px 30px;
+}
+
+@mixin numbers{
+	background: #A95DDB;
+    text-align: center;
+    color: #fff;
+    padding: 5px;
+    border-radius: 100px;
+}
+
+@mixin image-card{
+    padding: 20px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 160px;
+	border-radius: 10px 10px 0px 0px;
+}
+
+
+body{
+	margin: 0px;
+}
+
+
+.bg-1{
+
+	background-image: url("https://www.codewithrandom.com/wp-content/uploads/2022/10/Number-Guessing-Game-using-JavaScript-3.png");
+}
+
+
+.bg-2{
+
+	background-image: url('https://www.codewithrandom.com/wp-content/uploads/2022/10/Number-Guessing-Game-using-JavaScript-3.png');
+}
+
+
+
+.bg-3{
+
+	background-image: url('https://www.codewithrandom.com/wp-content/uploads/2022/10/Number-Guessing-Game-using-JavaScript-3.png');
+}
+
+
+
+.bg-4{
+
+	background-image: url('https://www.codewithrandom.com/wp-content/uploads/2022/10/Number-Guessing-Game-using-JavaScript-3.png');
+}
+
+
+.homepage{
+	.header{
+		&__one{
+			text-align: center;
+    		padding: 25px 0px 15px;
+
+    		img{
+    			width: 50%;
+    		}
+		}
+		&__two{
+			background-color: #EAEAEA;
+			display: inline-flex;
+		    flex-direction: row;
+		    padding: 15px 145px 15px 111px;
+		    text-align: center;
+
+		    i{
+		    	margin-right: 20px;
+		    }
+
+		    h5{
+		    	margin: 0px;
+    			font-size: 18px;
+		    }
+		}
+
+	}
+
+	.banner{
+		background-color: $bg-color-1;
+		@include center;
+		padding: 50px 40px;
+		
+		&__textone{
+			@include title;
+			@include center;
+		}
+
+		&__texttwo{
+		    margin: 30px 20px;
+		    font-weight: 200;
+		    color: #595959;
+		}
+
+		button{
+			background: $main-color;
+		    border: 1px solid #B160DB;
+		    padding: 17px 20px;
+		    color: #fff;
+		    font-size: 16px;
+		    border-radius: 100px;
+		}
+	}	
+
+	.works{
+		@include block;
+
+		&__title{
+			@include title;
+			padding: 0px 0px 30px;
+		}
+
+		&__cards{
+			background: #F6F6F6;
+    		border-radius: 20px;
+    		padding: 25px 0px;
+    		margin-left: 15px;
+    		margin-bottom: 30px;
+
+			p{
+				margin: 0px;
+			}
+
+			ul{
+				display: inline-flex;
+    			list-style: none;
+    			padding: 0px;
+			    margin: 0px;
+			    width: 100%;
+
+    			> li:nth-of-type(1){
+    				width: 8%;
+    				margin-left: -14px;
+
+    				p{
+    					@include numbers;
+    				}
+    			}
+
+    			> li:nth-of-type(2){
+    				width: 15%;
+    				text-align: center;
+    			}
+
+    			> li:nth-of-type(3){
+
+    				p{
+    					font-size: 20px;
+    				}
+    			}
+			}
+		}
+	}
+
+	.restaurant{
+		@include block;
+		background-color: #f6f6f6;
+
+		&__title{
+			@include title;
+			margin-bottom: 30px;
+		}
+
+		&__cards .cards{
+			background-color: #fff;
+			margin-bottom: 30px;
+			border-radius: 20px;
+			overflow: hidden;
+
+			&__img{
+			    @include image-card;
+
+			    button{
+			    	float: right;
+			    	background-color: #99E2D0;
+				    border-color: #99E2D0;
+				    box-shadow: none;
+				    padding: 10px 30px;
+				    color: #278b72;
+				    border-style: none;
+    				border-radius: 5px;
+			    }
+			}
+
+			&__title{
+				padding: 0px 20px;
+
+				i{
+					float: right;
+				    margin-right: 10px;
+				    margin-top: -50px;
+
+				}
+
+				&__textone{
+					margin-bottom: 0px;
+				}
+
+				&__texttwo{
+					margin-top: 5px;
+				    font-weight: 200;
+				    font-size: 20px;
+				    margin-bottom: 20px;
+				}
+			}
+		}
+	}
+
+}
+
+
+
