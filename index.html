@@ -6,10 +6,10 @@
 	  <meta charset="utf-8">
 	  <meta content="width=device-width, initial-scale=1" name="viewport">
 	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-	  <link rel="stylesheet" href="css/style.css"/>
+	  <link rel="stylesheet" href="css/style.css" />
 	</head>
   	<body>
-		<div class="homepage">
+		<div class="container">
 			<div class="header">
 				<!--<h1 class="header__one">ohmyfood</h1>-->
 				<div class="header__one">
@@ -22,22 +22,22 @@
 			</div>
 			<div class="banner">
 				<h1 class="banner__textone">Book the menu you like</h1>
-			    <h3 class="banner__texttwo">Discover top-of-the-art restuarant we picked for you</h3>
-			    <button type="explore" class="btn">Explore our restaurants</button>
+			    <h3 class="banner__texttwo">Discover top-of-the-art restuarant we picked for you</h3> 
+				<button class="banner__button">Explore our restaurants</button>
 			</div>
 			<div class="works">
 				<h1 class="works__title">How it works</h1>
 				<div class="works__cards">
 			    	<ul>
 			    		<li><p class="num">1</p></li>
-			        	<li><i class="fa-solid fa-mobile-screen-button"></i></li>
+			        	<li><i class="fa-sharp fa-solid fa-mobile-screen"></i></li>
 			        	<li><p>Chose a restaurant</p></li>
 			        </ul>
 			    </div>
 			    <div class="works__cards">
 			    	<ul>
 			    		<li><p class="num">2</p></li>
-			        	<li><i class="fa-solid fa-bars"></i></li>
+			        	<li><i class="fa-sharp fa-solid fa-bars"></i></li>
 			        	<li><p>Create your menu</p></li>
 			        </ul>
 			    </div>
@@ -52,65 +52,79 @@
 			<div class="restaurant">
 			    <h1 class="restaurant__title">Restaurants</h1>
 			    <div class="restaurant__cards">
-				    <article class="cards">
-				        <div class="cards__img bg-1">
-				        	<button>New</button>
-				        </div>
-				        <div class="cards__title">
-				        <h1 class="cards__title__textone">The Full Palette</h1>
-				        <h2 class="cards__title__texttwo">New York</h2>
-				        <i class="fa-thin fa-heart"></i>
-				        </div>
-				    </article>
-				    <article class="cards">
-				        <div class="cards__img bg-2">
-				        	<button>New</button>
-				        </div>
-				        <div class="cards__title">
-				        <h1 class="cards__title__textone">The Enchanted Plate</h1>
-				        <h2 class="cards__title__texttwo">New York</h2>
-				        <i class="fa-thin fa-heart"></i>
-				        </div>
-				    </article>
-				    <article class="cards">
-				        <div class="cards__img bg-3">
-				        	<button>New</button>
-				        </div>
-				        <div class="cards__title">
-				        <h1 class="cards__title__textone">Bastille</h1>
-				        <h2 class="cards__title__texttwo">New York</h2>
-				        <i class="fa-thin fa-heart"></i>
-				        </div>
-				    </article>
-				    <article class="cards">
-				        <div class="cards__img bg-4">
-				        	<button>New</button>
-				        </div>
-				        <div class="cards__title">
-				        <h1 class="cards__title__textone">Le Gourmand</h1>
-				        <h2 class="cards__title__texttwo">New York</h2>
-				        <i class="fa-thin fa-heart"></i>
-				        </div>
-				    </article>
+				    <a href="fullpalette.html" class="cards">
+				    	<article>
+					        <div class="cards__img pallete-bg">
+					        	<button>New</button>
+					        </div>
+					        <div class="cards__title">
+						        <h1 class="cards__title__textone">The Full Palette</h1>
+						        <h2 class="cards__title__texttwo">New York</h2>
+						        <i class="fa-solid fa-heart"></i>
+					        </div>
+				    	</article>
+				    </a>
+				    <a href="enchanted.html" class="cards">
+					    <article>
+					        <div class="cards__img enchanted-bg">
+					        	<button>New</button>
+					        </div>
+					        <div class="cards__title">
+					        <h1 class="cards__title__textone">The Enchanted Plate</h1>
+					        <h2 class="cards__title__texttwo">New York</h2>
+					        <i class="fa-solid fa-heart"></i>
+					        </div>
+					    </article>
+					</a>
+					<a href="bastille.html" class="cards">
+					    <article>
+					        <div class="cards__img bastille-bg">
+					        	<button>New</button>
+					        </div>
+					        <div class="cards__title">
+					        <h1 class="cards__title__textone">Bastille</h1>
+					        <h2 class="cards__title__texttwo">New York</h2>
+					        <i class="fa-solid fa-heart"></i>
+					        </div>
+					    </article>
+					</a>
+					<a href="gourmand.html" class="cards">
+					    <article>
+					        <div class="cards__img gourmand-bg">
+					        	<button>New</button>
+					        </div>
+					        <div class="cards__title">
+					        <h1 class="cards__title__textone">Le Gourmand</h1>
+					        <h2 class="cards__title__texttwo">New York</h2>
+					        <i class="fa-solid fa-heart"></i>
+					        </div>
+					    </article>
+					</a>
 			    </div>
 			</div>
-	<footer>
-    <div class="footer-main">
-     <div class="footer-logo">
-        <img alt="text" src="ohmyfood.png">
-     </div>
-     <ul class="footer__first__text">
-      <ul>
-        <li><i class="fa-solid fa-utensils"></i>Suggest a restaurant</li>
-        <li><i class="fa-solid fa-handshake-angle"></i>Become a partner</li>
-      </ul>
-      <ul>
-        <li>Legal</li>
-        <li>Contact</li>
-      </ul>
-     </ul>
-    </div>
-    
-  </footer>
-  </div>
-  </body>
+			<footer>
+			    <div class="footer-main">
+			    	<div class="footer-logo">
+			        	<img alt="text" src="images/ohmyfoodfooter.png" width="30%">
+			     	</div>
+			     	<ul class="footer__first__text">
+			     		<li>
+				      		<ul>
+				        		<li> <i class="fa-solid fa-utensils"> </i></li>
+				        		<li>Suggest a restaurant</li>
+				      		</ul>
+				  		</li>
+				  		<li>
+				      		<ul>
+				        		<li> <i class="fa-solid fa-utensils"> </i></li>
+				        		<li>Become a partner</li>
+				      		</ul>
+				  		</li>
+			        	<li>Legal</li>
+			        	<li>Contact</li>
+			      	</ul>
+			    </div>
+		  	</footer>
+  		</div>
+  	</body>
+</html>

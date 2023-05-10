@@ -2,8 +2,13 @@ $main-color: #A95DDB;
 $black: #333;
 $bg-color-1: #F6F6F6;
 
+// Button 1
+$colour1: #7b81ec;
+$colour2: #3bd1d3;
+
+
 @mixin title{
-	font-size: 32px;
+	font-size: 29px;
     font-weight: 800;
     color: #000;
     margin: 0px;
@@ -35,209 +40,887 @@ $bg-color-1: #F6F6F6;
 	border-radius: 10px 10px 0px 0px;
 }
 
+@mixin ul-style{
+	list-style: none;
+	padding-left: 0px;
+}
+
+
+
+
+
+/* HOMEPAGE STYLING */
+
+
 
 body{
 	margin: 0px;
+	font-family: sans-serif;
 }
 
 
-.bg-1{
-
-	background-image: url("https://www.codewithrandom.com/wp-content/uploads/2022/10/Number-Guessing-Game-using-JavaScript-3.png");
+button {
+	margin: 1em auto;
+	display: block;
+	-webkit-appearance: none;
+	border: 6px solid rgba(255,255,255,0.45);
+	border-radius: 50px;
+	padding: 1em 1.5em;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-clip: padding-box;
+	position: relative;
+	color: #FFF;
+	font-size: 1.12em;
 }
 
 
-.bg-2{
 
-	background-image: url('https://www.codewithrandom.com/wp-content/uploads/2022/10/Number-Guessing-Game-using-JavaScript-3.png');
+.pallete-bg{
+
+	background-image: url("../images/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+}
+
+
+.enchanted-bg{
+
+	background-image: url("../images/stil-u2Lp8tXIcjw-unsplash.jpg");
 }
 
 
 
-.bg-3{
+.bastille-bg{
 
-	background-image: url('https://www.codewithrandom.com/wp-content/uploads/2022/10/Number-Guessing-Game-using-JavaScript-3.png');
+	background-image: url("../images/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
 }
 
 
 
-.bg-4{
+.gourmand-bg{
 
-	background-image: url('https://www.codewithrandom.com/wp-content/uploads/2022/10/Number-Guessing-Game-using-JavaScript-3.png');
+	background-image: url("../images/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
 }
 
 
-.homepage{
-	.header{
-	
-		&__one{
-			text-align: center;
-    		padding: 25px 0px 15px;
 
-    		img{
-    			width: 50%;
-    		}
-		}
-		&__two{
-			background-color: #EAEAEA;
+
+
+
+
+/* HOMEPAGE STYLING WEBPAGE*/
+
+
+	.container{
+		.header{
 			display: inline-flex;
-		    flex-direction: row;
-		    padding: 15px 145px 15px 111px;
-		    text-align: center;
+    		width: 100%;
 
-		    i{
-		    	margin-right: 20px;
-		    }
+			&__one{
+				padding: 25px 0px 20px 50px;
+			    width: 50%;
 
-		    h5{
-		    	margin: 0px;
-    			font-size: 18px;
-		    }
-		}
-
-	}
-
-	.banner{
-		background-color: $bg-color-1;
-		@include center;
-		padding: 50px 40px;
-		
-		&__textone{
-			@include title;
-			@include center;
-		}
-
-		&__texttwo{
-		    margin: 30px 20px;
-		    font-weight: 200;
-		    color: #595959;
-		}
-
-		button{
-			background: $main-color;
-		    border: 1px solid #B160DB;
-		    padding: 17px 20px;
-		    color: #fff;
-		    font-size: 16px;
-		    border-radius: 100px;
-		}
-	}	
-
-	.works{
-		@include block;
-
-		&__title{
-			@include title;
-			padding: 0px 0px 30px;
-		}
-
-		&__cards{
-			background: #F6F6F6;
-    		border-radius: 20px;
-    		padding: 25px 0px;
-    		margin-left: 15px;
-    		margin-bottom: 30px;
-
-			p{
-				margin: 0px;
+	    		img{
+	    			width: 30%;
+	    		}
 			}
 
-			ul{
+			&__two{
+				background-color: #EAEAEA;
 				display: inline-flex;
-    			list-style: none;
-    			padding: 0px;
-			    margin: 0px;
-			    width: 100%;
+			    flex-direction: row;
+			    text-align: center;
+			    width: 50%;
+    			padding: 30px 0px 20px 50px;
 
-    			> li:nth-of-type(1){
-    				width: 8%;
-    				margin-left: -14px;
+			    i{
+			    	margin-right: 20px;
+			    }
 
-    				p{
-    					@include numbers;
-    				}
-    			}
-
-    			> li:nth-of-type(2){
-    				width: 15%;
-    				text-align: center;
-    			}
-
-    			> li:nth-of-type(3){
-
-    				p{
-    					font-size: 20px;
-    				}
-    			}
-			}
-		}
-	}
-
-	.restaurant{
-		@include block;
-		background-color: #f6f6f6;
-
-		&__title{
-			@include title;
-			margin-bottom: 30px;
-		}
-
-		&__cards .cards{
-			background-color: #fff;
-			margin-bottom: 30px;
-			border-radius: 20px;
-			overflow: hidden;
-
-			&__img{
-			    @include image-card;
-
-			    button{
-			    	float: right;
-			    	background-color: #99E2D0;
-				    border-color: #99E2D0;
-				    box-shadow: none;
-				    padding: 10px 30px;
-				    color: #278b72;
-				    border-style: none;
-    				border-radius: 5px;
+			    h5{
+			    	margin: 0px;
+	    			font-size: 18px;
+	    			font-weight: 400;
 			    }
 			}
 
+		}
+
+		.banner{
+			background-color: $bg-color-1;
+			@include center;
+			padding: 150px 0px 130px;
+			
+			&__textone{
+				@include title;
+				@include center;
+				padding-top: 5px;
+				font-size: 42px;
+				text-transform: capitalize;
+			}
+
+			&__texttwo{
+			    margin: 10px 10px 20px;
+			    font-weight: 200;
+			    color: #595959;
+			}
+
+			&__button {
+				background-image: linear-gradient(90deg, $colour1, $colour2);
+			  	
+			  	&:before {
+			  		background-image: linear-gradient(90deg, $colour1, transparent);
+				}
+
+				&:after {
+					background-image: linear-gradient(90deg, transparent, $colour2);
+				}
+			}
+		}	
+
+		.works{
+			@include block;
+			padding: 100px 50px 70px;
+			text-align: center;
+
 			&__title{
-				padding: 0px 20px;
+				@include title;
+				padding: 0px 0px 30px;
+			}
 
-				i{
-					float: right;
-				    margin-right: 10px;
-				    margin-top: -50px;
+			&__cards{
+				background: #F6F6F6;
+	    		border-radius: 15px;
+	    		padding: 20px 0px;
+    			margin-bottom: 30px !important;
+    			width: 30%;
+    			margin: auto;
 
+				p{
+					margin: 0px;
 				}
 
-				&__textone{
-					margin-bottom: 0px;
-				}
+				ul{
+					display: inline-flex;
+	    			list-style: none;
+	    			padding: 0px;
+				    margin: 0px;
+				    width: 100%;
 
-				&__texttwo{
-					margin-top: 5px;
-				    font-weight: 200;
-				    font-size: 20px;
-				    margin-bottom: 20px;
+	    			> li:nth-of-type(1){			
+    					width: 7.5%;
+    					margin-left: -12px;
+
+
+	    				p{
+	    					@include numbers;
+	    				}
+	    			}
+
+	    			> li:nth-of-type(2){
+	    				width: 15%;
+	    				text-align: center;
+	    			}
+
+	    			> li:nth-of-type(3){
+
+	    				p{
+	    					font-size: 20px;
+	    				}
+	    			}
 				}
 			}
 		}
+
+		.restaurant{
+			@include block;
+			background-color: #f6f6f6;
+			padding: 100px 50px 80px;
+
+			&__title{
+				@include title;
+				margin-bottom: 50px;
+				text-align: center;
+    			text-transform: uppercase;
+			}
+
+			&__cards {
+				width: 100%;
+			    display: inline-flex;
+			    flex-flow: wrap;
+			}
+			
+			.cards{
+				background-color: #fff;
+				margin-bottom: 40px;
+				border-radius: 20px;
+				overflow: hidden;
+				margin-right: 20px;
+				width: 30%;
+				margin-left: 20px;
+				text-decoration: none;
+    			color: #000;
+
+    			&:hover{
+    				color: #669900;
+    			}
+
+				&__img{
+				    @include image-card;
+
+				    button{
+				    	float: right;
+				    	background-color: #99E2D0;
+					    border-color: #99E2D0;
+					    box-shadow: none;
+					    padding: 8px 30px;
+					    color: #278b72;
+					    border-style: none;
+	    				border-radius: 5px;
+	    				margin-top: 0px;
+				    }
+				}
+
+				&__title{
+					padding: 0px 20px;
+
+					i{
+						float: right;
+					    margin-right: 10px;
+					    margin-top: -50px;
+
+					}
+
+					&__textone{
+						margin-bottom: 0px;
+					}
+
+					&__texttwo{
+						margin-top: 5px;
+					    font-weight: 200;
+					    font-size: 16px;
+					    margin-bottom: 20px;
+					}
+				}
+			}
+		}
+
+		footer{
+			background-color: #323232;
+			color: #fff;
+			padding: 30px 40px 30px;
+    		width: 94.1%;
+
+    		.footer{
+
+    			&-main{
+    			width: 100%;
+    			display: inline-flex;
+    			}
+
+				&-logo{
+					width: 50%;
+					padding-top: 12px;
+
+					img{
+						margin-bottom: 5px;
+					}
+				}
+
+				&__first__text{
+					@include ul-style;
+					width: 50%;
+					display: flex;
+
+				    li{
+				    	margin: auto;
+				    	font-size: 16px;
+				    	ul{
+					    	@include ul-style;
+					    	display: inline-flex;
+					    	li{
+					    		margin-bottom: 0px;
+
+					    		&:nth-of-type(1){
+					    		margin-right: 10px;
+					    		}
+					    	}
+					    }
+				    }
+			    }
+			}
+		} 
 	}
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* RESPONSIVE MOBILE STYLING HOMPAGE */
+
+
+
+@media screen and (max-width: 760px){
+
+	.container{
+		.header{
+			display: block;
+    		width: auto;
+
+			&__one{
+				text-align: center;
+	    		padding: 25px 0px 15px;
+	    		width: auto;
+
+	    		img{
+	    			width: 50%;
+	    		}
+			}
+			&__two{
+				background-color: #EAEAEA;
+				display: inline-flex;
+			    flex-direction: row;    
+			    text-align: left;
+			    width: 68.5%;
+			    padding: 20px 0px 20px 130px;
+
+			    i{
+			    	margin-right: 14px;
+			    }
+
+			    h5{
+			    	margin: 0px;
+	    			font-size: 18px;
+	    			font-weight: 400;
+	    			width: 70%;
+			    }
+			}
+
+		}
+
+		.banner{
+			background-color: $bg-color-1;
+			@include center;
+			padding: 50px 40px;
+			
+			&__textone{
+				@include title;
+				@include center;
+				padding-top: 5px;
+				text-transform: none;
+			}
+
+			&__texttwo{
+			    margin: 30px 10px 20px;
+			    font-weight: 200;
+			    color: #595959;
+			}
+
+			&__button {
+				background-image: linear-gradient(90deg, $colour1, $colour2);
+			  	
+			  	&:before {
+			  		background-image: linear-gradient(90deg, $colour1, transparent);
+				}
+
+				&:after {
+					background-image: linear-gradient(90deg, transparent, $colour2);
+				}
+			}
+		}	
+
+		.works{
+			@include block;
+			text-align: left;
+
+			&__title{
+				@include title;
+				padding: 0px 0px 30px;
+			}
+
+			&__cards{
+				background: #F6F6F6;
+	    		border-radius: 20px;
+	    		padding: 25px 0px;
+	    		margin-left: 15px;
+	    		margin-bottom: 30px;
+	    		width: auto;
+	    		/*width: 100%;
+    			margin: 0;*/
+
+				p{
+					margin: 0px;
+				}
+
+				ul{
+					display: inline-flex;
+	    			list-style: none;
+	    			padding: 0px;
+				    margin: 0px;
+				    width: 100%;
+
+	    			> li:nth-of-type(1){
+	    				width: 8%;
+	    				margin-left: -14px;
+
+	    				p{
+	    					@include numbers;
+	    				}
+	    			}
+
+	    			> li:nth-of-type(2){
+	    				width: 15%;
+	    				text-align: center;
+	    				margin-top: 3px;
+	    			}
+
+	    			> li:nth-of-type(3){
+
+	    				p{
+	    					font-size: 20px;
+	    				}
+	    			}
+				}
+			}
+		}
+
+		.restaurant{
+			@include block;
+			background-color: #f6f6f6;
+
+			&__title{
+				@include title;
+				margin-bottom: 30px;    
+				text-transform: none;
+    			text-align: left;
+			}
+
+			&__cards{ 
+				.cards{
+					background-color: #fff;
+					margin-bottom: 30px;
+					border-radius: 20px;
+					overflow: hidden;
+					width: 100%;
+				    margin-left: 0px;
+				    margin-right: 0px;
+
+					&__img{
+					    @include image-card;
+
+					    button{
+					    	float: right;
+					    	background-color: #99E2D0;
+						    border-color: #99E2D0;
+						    box-shadow: none;
+						    padding: 8px 30px;
+						    color: #278b72;
+						    border-style: none;
+		    				border-radius: 5px;
+		    				margin-top: 0px;
+					    }
+					}
+
+					&__title{
+						padding: 0px 20px;
+
+						i{
+							float: right;
+						    margin-right: 10px;
+						    margin-top: -50px;
+
+						}
+
+						&__textone{
+							margin-bottom: 0px;
+						}
+
+						&__texttwo{
+							margin-top: 5px;
+						    font-weight: 200;
+						    font-size: 20px;
+						    margin-bottom: 20px;
+						}
+					}
+				}
+			}
+		}
+
+		footer{
+			margin-bottom: 565px;
+			background-color: #323232;
+			color: #fff;
+			padding: 40px 40px 30px;
+			width: auto;
+
+			.footer{
+
+				&-main{
+					width: 100%;
+				    display: block;
+				}
+
+				&-logo{
+					width: 100%;
+
+					img{
+						margin-bottom: 5px;
+					}
+				}
+
+				&__first__text{
+					@include ul-style;
+					width: 100%;
+    				display: block;
+
+			    	li{
+			    		margin-bottom: 10px;
+			    		font-size: 16px;
+			    		
+			    		ul{
+				    		@include ul-style;
+				    		display: inline-flex;
+				    		
+				    		li{
+				    			margin-bottom: 0px;
+				    			
+				    			&:nth-of-type(1){
+				    			margin-right: 10px;
+				    			}
+				    		}
+				    	}
+			    	}
+		    	}
+			} 
+		}
+	}
 }
 
-/* bastille
 
-.bastille-love__text {
-	color: yellow;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* CONTENT PAGE STYLING WEBPAGE BEGINS */
+
+
+.container{
+	.content{
+
+		&__header{
+			display: inline-flex;
+    		width: 100%;
+
+    		a{
+    			width: 35%;
+    			color: #000;
+    		}
+
+    		i{
+    			width: 30%;
+		    	padding: 30px 0px 20px 50px;
+		    	font-size: 24px;
+    		}
+
+    		&__one{
+    			padding: 25px 0px 20px 50px;
+
+    			img{
+    			    width: 50%;
+    			}
+    		}
+		}
+
+		&__image{
+			height: 500px;
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+
+		&__menus{
+			background-color: #f2f2f2;
+			margin-top: -50px;
+			border-radius: 50px 50px 0px 0px;
+			padding: 50px;
+
+			&-head{
+			    display: inline-flex;
+				flex-direction: row;
+			    width: 100%;
+			    margin-bottom: 10px;
+
+			    h1{
+			    	font-size: 28px;
+				    font-style: italic;
+				    font-weight: 800;
+				    width: 90%;
+				    padding-left: 25px;
+			    }
+
+			    i{
+			    	width: 10%;
+				    margin-top: 22px;
+				    font-size: 28px;
+			    }
+			}
+
+			&-body{
+				display: inline-flex;
+			    width: 100%;
+			    margin-top: 50px;
+			}
+
+			&-block{
+				width: 30%;
+    			margin: 0px 25px;
+
+			   	&-title{
+			   		font-size: 15px;
+			   	}
+
+			   	.line{
+		    		border-top: 3px solid #cccccc;
+					width: 11%;
+					margin-top: -7px;
+					margin-bottom: 30px;
+		    	}
+
+			   	&-content{
+
+			   		.card{
+			    		background: #fff;
+					    padding: 15px 10px;
+					    border-radius: 10px;
+					    margin-bottom: 20px;
+
+					    &-title{
+    						font-size: 17px;
+					    }
+
+					    &-description{
+					    	font-weight: 200;
+    						font-size: 14px;
+    						display: inline-flex;
+    						width: 100%;
+
+    						p{
+    							margin: 7px 0px 0px;
+
+    							&:nth-of-type(1){
+    								width: 90%;
+    							}
+
+    							&:nth-of-type(2){
+    								font-weight: bold;
+    							}
+    						}
+						}
+					}
+			   	}
+		    }
+
+		    &-button{
+			    button{
+			   		width: 300px;
+			   		margin-bottom: 100px;
+    				margin-top: 50px;
+			   	}
+			}
+		}
+	}
 }
 
-*/
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* CONTENT STYLING START RESPONSIVE MOBILE STYLING */
+
+
+
+@media screen and (max-width: 760px){
+	.container{
+		
+		.content{
+
+			&__header{
+				display: inline-flex;
+			    padding: 20px 0px 15px 40px;
+			    width: auto;
+
+			    a{
+			    	width: 20%;
+			    	color: #000;
+			    }
+
+			    i{
+			    	margin-top: 7px;
+	    			font-size: 22px;
+	    			padding: 0px;
+			    }
+
+			    &__one{
+			    	width: 70%;
+			    	padding: 0px;
+
+			    	img{
+			    		width: 80%;
+			    	}
+			    }
+			}
+
+			&__image{
+			    height: 300px;
+			    background-size: cover;
+			    background-repeat: no-repeat;
+			}
+
+			&__menus{
+				background-color: #f2f2f2;
+			    margin-top: -60px;
+			    border-radius: 50px 50px 0px 0px;
+			    padding: 20px 20px;
+
+			    &-head{
+			    	display: inline-flex;
+				    flex-direction: row;
+				    width: 100%;
+				    margin-bottom: 10px;
+
+				    h1{
+				    	font-size: 28px;
+					    font-style: italic;
+					    font-weight: 800;
+					    width: 70%;
+					    padding-left: 0px;
+				    }
+
+				    i{
+				    	width: 25%;
+					    margin-top: 22px;
+					    font-size: 28px;
+					    text-align: right;
+				    }
+			    }
+
+			    &-body{
+			    	display: block;
+			    	width: auto;
+			    	margin-top: 0px;
+			    }
+
+			    &-block{
+			    	width: auto;
+			    	margin: 0px 0px 50px 0px;
+
+			    	&-title{
+			    		font-size: 15px;
+			    	}
+
+			    	.line{
+			    		border-top: 3px solid #cccccc;
+						width: 11%;
+						margin-top: -7px;
+						margin-bottom: 20px;
+			    	}
+
+			    	&-content{
+
+			    		.card{
+				    		background: #fff;
+						    padding: 15px 10px;
+						    border-radius: 10px;
+						    margin-bottom: 20px;
+
+						    &-title{
+    							font-size: 17px;
+						    }
+
+						    &-description{
+						    	font-weight: 200;
+    							font-size: 14px;
+    							display: inline-flex;
+    							width: 100%;
+
+    							p{
+    								margin: 7px 0px 0px;
+
+    								&:nth-of-type(1){
+    									width: 90%;
+    								}
+
+    								&:nth-of-type(2){
+    								font-weight: bold;
+    								}
+    							}
+						    }
+						}
+			    	}
+			    }
+
+			    &-button{
+			    	button{
+			    		width: 200px;
+			    		margin-bottom: 50px;
+			    	}
+			    }
+			}
+		}
+	}
+}
 
 
